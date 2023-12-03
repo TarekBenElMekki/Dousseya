@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+</head>
+<body>
+    <div class="left-section">
+        <span id="doctorText">Add A Doctor Portfolio</span>
+        <button id="addBtn">Add</button>
+
+        <form id="doctorForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="speciality">Speciality:</label>
+            <select id="speciality" name="speciality" required>
+                <option value="ophtalmologue">Ophtalmologue</option>
+                <option value="dentiste">Dentiste</option>
+                <option value="generaliste">Généraliste</option>
+            </select>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="homme">Homme</option>
+                <option value="femme">Femme</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <script>
+            document.getElementById('addBtn').addEventListener('click', function() {
+                // Hide the button when clicked
+                this.style.display = 'none';
+
+                // Hide the initial text
+                document.getElementById('doctorText').style.display = 'none';
+
+                // Show the form
+                document.getElementById('doctorForm').style.display = 'flex';
+            });
+        </script>
+    </div>
+
+    <div class="right-section">
+        <div class="serviceBox">
+            <h3 class="title">Web Design</h3>
+            <p class="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
+            <div class="service-icon">
+                <span><i class="fa fa-globe"></i></span>
+            </div>
+        </div>
+        <div class="serviceBox green">
+            <h3 class="title">Web Development</h3>
+            <p class="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
+            <div class="service-icon">
+                <span><i class="fa fa-rocket"></i></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
